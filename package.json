@@ -1,6 +1,6 @@
 {
     "name": "@crestfi/ui-components",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "description": "CrestFi UI Components Library",
     "license": "MIT",
     "author": "CrestFi HQ",
@@ -61,7 +61,7 @@
         "webpack": "^5.88.2",
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^4.15.1",
-        "crest-icons": "^1.1.1"
+        "crest-icons": "^1.0.1"
     },
     "peerDependencies": {
         "react": ">=17.0.2",
