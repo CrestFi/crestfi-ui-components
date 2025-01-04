@@ -22969,13 +22969,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const buttonStyles = (0,class_variance_authority__WEBPACK_IMPORTED_MODULE_2__.cva)("rounded-lg whitespace-nowrap transition duration-300 text-content-primary disabled:text-content-secondary disabled:cursor-not-allowed", {
+const buttonStyles = (0,class_variance_authority__WEBPACK_IMPORTED_MODULE_2__.cva)("rounded-full whitespace-nowrap transition duration-300 text-content-primary disabled:cursor-not-allowed", {
     variants: {
         variant: {
             default: "outline bg-primary outline-1 outline-outline outline-offset-[-1px] hover:bg-primary-dark",
             gradient: "primary-gradient-border focus:outline-0",
             normal: "outline border  outline-1 outline-outline outline-offset-[-1px] bg-background-secondary  hover:bg-background-tertiary",
-            danger: "bg-error focus:outline-0 text-background-primary hover:bg-error-dark disabled:text-background-tertiary"
+            danger: "bg-error focus:outline-0 text-background-primary hover:bg-error-dark disabled:text-background-primary"
         },
         size: {
             large: "text-lg",
@@ -23152,7 +23152,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const Card = (props) => {
     const { Icon, title, description, children } = props;
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "p-6 rounded shadow bg-background-primary", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "flex gap-x-4 border-b border-outline pb-4", children: [Icon && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "shrink-0 bg-background-secondary-light text-content-secondary w-9 h-9 rounded-lg grid place-content-center", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Icon, { className: "text-content-secondary" }) })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "flex flex-col gap-y-2", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h6", { className: "text-xs uppercase text-content-tertiary font-semibold ", children: title }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { className: "text-content-primary text-sm", children: description })] })] }), children && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "h-1 bg-outline-border mb-4" }), children] }))] }) }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "p-6 rounded shadow bg-background-primary", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "flex gap-x-4 border-b border-outline pb-4", children: [Icon && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Icon, { className: "w-7 h-7" }) })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "flex flex-col gap-y-2", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h6", { className: "text-2xl text-content-primary font-semibold ", children: title }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { className: "text-content-primary text-sm", children: description })] })] }), children && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "h-1 bg-outline-border mb-4" }), children] }))] }) }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);
 
@@ -23197,7 +23197,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const statusIconMapping = {
     completed: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_1__.CheckIcon, { className: "text-success text-xl" }),
-    scheduled: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_1__.CalendarIcon, { className: "!text-content-secondary  text-xl" }),
+    scheduled: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_1__.CalendarIcon, { className: "!text-content-primary  text-xl" }),
     cancelled: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_1__.CrossIcon, { className: "text-error text-xl" }),
     paused: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_1__.PauseIcon, { className: "text-content-contrast text-xl" })
 };
@@ -23219,7 +23219,7 @@ const getBackgroundByPercentage = (percentage, status) => {
         case "paused":
             return "text-content-contrast";
         case "ongoing":
-            return "text-primary";
+            return "text-content-ongoing";
     }
     return "";
 };
@@ -23623,7 +23623,7 @@ const Pagination = (props) => {
                         : "cursor-pointer"}`, onClick: () => {
                         setCurrentButton((prev) => Number(prev) <= 1 ? prev : Number(prev) - 1);
                         onChange && onChange();
-                    }, disabled: currentButton === 1, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_2__.PaginationPreviousIcon, {}) }), arrOfCurrButtons.map((item, index) => {
+                    }, disabled: currentButton === 1, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_2__.PaginationPreviousIcon, {className: "text-content-primary w-4 h-4"}) }), arrOfCurrButtons.map((item, index) => {
                     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: `w-8 h-8 flex items-center justify-center p-1.5 text-content-primary ${item == "..."
                             ? "cursor-default"
                             : "cursor-pointer "} ${currentButton === item
@@ -23645,7 +23645,7 @@ const Pagination = (props) => {
                             : Number(prev) + 1);
                         onChange && onChange();
                     }, disabled: currentButton === numberOfPages.length ||
-                        numberOfPages.length === 0, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_2__.PaginationNextIcon, {}) })] }) }));
+                        numberOfPages.length === 0, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_2__.PaginationNextIcon, {className: "text-content-primary w-4 h-4"}) })] }) }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Pagination);
 
@@ -23706,7 +23706,7 @@ const SearchBar = (props) => {
             onSearchCallback(searchText.trim());
         }
     };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: `relative w-full `, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "absolute top-1/2 left-4 -translate-x-1/2 -translate-y-1/2", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_2__.SearchIcon, { className: "text-content-secondary" }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", { className: "w-full height-full py-2 pe-4 !ps-7 focus:outline-none text-content-tertiary text-sm rounded-lg border border-outline", type: "text", placeholder: placeHolder, value: searchText, onChange: (e) => handleChange(e), ref: searchInputRef, onKeyDown: _onSubmit })] }) }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: `relative w-full `, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "absolute top-1/2 left-4 -translate-x-1/2 -translate-y-1/2", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_2__.SearchIcon, { style: { color: "white" } }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", { className: "w-full height-full py-2 pe-4 !ps-7 focus:outline-none text-content-tertiary text-sm rounded-lg border border-outline", style: { letterSpacing: "0.15em" }, type: "text", placeholder: placeHolder, value: searchText, onChange: (e) => handleChange(e), ref: searchInputRef, onKeyDown: _onSubmit })] }) }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchBar);
 
@@ -23824,7 +23824,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 const ActiveTabIndicator = ({ activeIndex, totalTabs }) => {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "absolute h-0.5 bg-background-accessible -bottom-[1px] transition-all duration-300 ease-out", style: {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "absolute h-0.5 bg-primary -bottom-[1px] transition-all duration-300 ease-out", style: {
                 left: `${activeIndex * (100 / totalTabs)}%`,
                 width: `${100 / totalTabs}%`
             } }) }));
@@ -23855,7 +23855,7 @@ const getTabStyles = (type, isActive) => {
                 ? "bg-background-tertiary text-content-primary"
                 : "text-content-secondary"}`;
         case "plain":
-            return `gap-x-2 ${isActive ? "text-primary-accessible" : "text-content-secondary"}`;
+            return `gap-x-2 ${isActive ? "text-primary" : "text-content-secondary"}`;
         default:
             return null;
     }
@@ -23864,9 +23864,9 @@ const Tab = (props) => {
     const { type = "solid", isActive, children, title, startIcon, endIcon, count, className, onClick } = props;
     const tabStyles = getTabStyles(type, isActive);
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", { type: "button", className: (0,tailwind_merge__WEBPACK_IMPORTED_MODULE_1__.twMerge)(`relative flex items-center px-6 py-2 w-max focus:outline-0 transition duration-300 ${tabStyles}`, className ?? ""), onClick: onClick, children: [startIcon && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: (0,tailwind_merge__WEBPACK_IMPORTED_MODULE_1__.twMerge)("text-xl w-max", isActive
-                        ? "text-primary-accessible"
-                        : "text-content-contrast"), children: startIcon })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "text-sm font-medium leading-6 w-max", children: children ? children : title }), count && count > 0 ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: `h-4 px-[5px] text-xs bg-background-tertiary text-content-secondary grid place-content-center rounded-full outline outline-1 outline-outline outline-offset-[-1px]`, children: count < 100 ? count : `99+` })) : (""), type === "plain" && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: `absolute h-0.5 bg-background-accessible left-0 -bottom-[1px] transition-all duration-300 ${isActive ? "w-full ease-out" : "w-0 ease-in"}` })), endIcon && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: (0,tailwind_merge__WEBPACK_IMPORTED_MODULE_1__.twMerge)("text-xl w-max", isActive
-                        ? "text-primary-accessible"
+                        ? "text-primary"
+                        : "text-content-contrast"), children: startIcon })), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "text-base font-bold leading-6 w-max", children: children ? children : title }), count && count > 0 ? ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: `h-4 px-[5px] text-xs bg-background-tertiary text-content-secondary grid place-content-center rounded-full outline outline-1 outline-outline outline-offset-[-1px]`, children: count < 100 ? count : `99+` })) : (""), type === "plain" && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: `absolute h-0.5 bg-primary left-0 -bottom-[1px] transition-all duration-300 ${isActive ? "w-full ease-out" : "w-0 ease-in"}` })), endIcon && ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: (0,tailwind_merge__WEBPACK_IMPORTED_MODULE_1__.twMerge)("text-xl w-max", isActive
+                        ? "text-primary"
                         : "text-content-contrast"), children: endIcon }))] }) }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tab);
@@ -24349,16 +24349,16 @@ const TimePicker = ({ error, register, placeholder, name, onChange, startIcon, e
                                 : "text-content-primary"} absolute z-10 top-2.5 left-4`, children: startIcon || (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_1__.ClockIcon, { className: "w-5 h-5" }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", { type: "text", readOnly: true, placeholder: placeholder, className: `w-full h-[40px] !pl-11 ${error && "error"}`, disabled: disabled, ...(register ? register(name) : null) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: `hover:cursor-pointer ${disabled
                                 ? "text-content-tertiary"
                                 : "text-content-primary"} text-lg absolute z-2 top-2 right-4`, onClick: handleClick, children: endIcon || ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(crest_icons__WEBPACK_IMPORTED_MODULE_1__.CheveronDownIcon, { className: "w-6 h-6" })) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_DropDownModel__WEBPACK_IMPORTED_MODULE_4__.CollapseDropdown, { show: toggleDropdown, className: "mt-3 w-[200px] z-[99]", position: "left", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: "grid grid-cols-3 rounded-lg bg-background-primary border border-outline", children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "max-h-[184px] overflow-auto", children: Hours.map((hour) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: `flex items-center justify-center p-2 cursor-pointer ${hour === selectedHour
-                                        ? "bg-background-light hover:bg-background-light"
-                                        : "hover:bg-background-secondary"}`, id: `hour-${hour}`, onClick: () => {
+                                        ? "bg-toggle"
+                                        : "hover:bg-toggle"}`, id: `hour-${hour}`, onClick: () => {
                                         setSelectedHour(hour);
                                     }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "text-content-primary text-sm", children: hour }) }, hour))) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "max-h-[184px] overflow-auto", children: Minutes.map((minute) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: `flex items-center justify-center p-2 cursor-pointer ${minute === selectedMinute
-                                        ? "bg-background-light hover:bg-background-light"
-                                        : "hover:bg-background-secondary"}`, id: `minute-${minute}`, onClick: () => {
+                                        ? "bg-toggle"
+                                        : "hover:hover:bg-toggle"}`, id: `minute-${minute}`, onClick: () => {
                                         setSelectedMinute(minute);
                                     }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "text-content-primary text-sm", children: minute }) }, minute))) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "max-h-[184px] overflow-auto", children: ap.map((a) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: `flex items-center justify-center p-2 cursor-pointer ${a === selectedAP
-                                        ? "bg-background-light hover:bg-background-light"
-                                        : "hover:bg-background-secondary"}`, id: `ap-${a}`, onClick: () => {
+                                        ? "bg-toggle"
+                                        : "hover:bg-toggle"}`, id: `ap-${a}`, onClick: () => {
                                         setSelectedAP(a);
                                     }, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "text-content-primary text-sm", children: a }) }, a))) })] }) })] }) }));
 };
@@ -24399,7 +24399,7 @@ const Toggle = (props) => {
     const { text, checked, disabled, onChange } = props;
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", { htmlFor: `toggle-${text}`, className: `w-max flex items-center cursor-pointer disabled:cursor-not-allowed relative ${disabled ? "opacity-[0.4]" : ""}`, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", { type: "checkbox", id: `toggle-${text}`, className: "sr-only", onChange: onChange, checked: checked || false, disabled: disabled }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: `toggle-bg border border-outline h-5 w-10 rounded-full transition duration-200 ${checked
                             ? "bg-primary"
-                            : "bg-background-secondary-light"}` }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "ml-[10px] text-sm font-medium text-content-secondary", children: text })] }) }) }));
+                            : "bg-toggle"}` }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", { className: "ml-[10px] text-sm font-semibold text-content-primary", children: text })] }) }) }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Toggle);
 
@@ -26845,23 +26845,11 @@ function getDefaultConfig() {
        */
       'font-smoothing': ['antialiased', 'subpixel-antialiased'],
       /**
-       * Font Style
-       * @see https://tailwindcss.com/docs/font-style
-       */
-      'font-style': ['italic', 'not-italic'],
-      /**
        * Font Weight
        * @see https://tailwindcss.com/docs/font-weight
        */
       'font-weight': [{
         font: ['thin', 'extralight', 'light', 'normal', 'medium', 'semibold', 'bold', 'extrabold', 'black', _validators_mjs__WEBPACK_IMPORTED_MODULE_1__.isArbitraryNumber]
-      }],
-      /**
-       * Font Family
-       * @see https://tailwindcss.com/docs/font-family
-       */
-      'font-family': [{
-        font: [_validators_mjs__WEBPACK_IMPORTED_MODULE_1__.isAny]
       }],
       /**
        * Font Variant Numeric
