@@ -22974,7 +22974,7 @@ const buttonStyles = (0,class_variance_authority__WEBPACK_IMPORTED_MODULE_2__.cv
         variant: {
             default: "outline bg-primary outline-1 outline-outline outline-offset-[-1px] hover:bg-primary-dark",
             gradient: "primary-gradient-border focus:outline-0",
-            normal: "outline border  outline-1 outline-outline outline-offset-[-1px] bg-background-secondary  hover:bg-background-tertiary",
+            normal: "outline border  outline-1 outline-outline outline-offset-[-1px] bg-primary  hover:bg-primary-dark",
             danger: "bg-error focus:outline-0 text-background-primary hover:bg-error-dark disabled:text-background-primary"
         },
         size: {
@@ -23086,7 +23086,7 @@ const getIconButtonVariantStyles = (variant) => {
     switch (variant) {
         case "default":
         case "solid":
-            return `border border-outline bg-background-secondary`;
+            return `border border-outline bg-primary`;
         case "outlined":
             return `border border-outline bg-transparent`;
         case "plain":
